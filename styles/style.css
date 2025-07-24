@@ -167,30 +167,98 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+.latest-deals-section > h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+.latest-deal-title-span {
+  color: var(--primary-color);
+}
+.latest-deals-section > p {
+  max-width: 888px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: var(--subtitle-color);
+}
 .deals-card-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   gap: 20px;
+  height: 420px;
 }
 .deals-card-left1 {
-  background-image: url(../assets/deal-ana.png);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.637),
+      rgba(0, 0, 0, 0.185)
+    ),
+    url(../assets/deal-ana.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
 }
 
-.deals-card-left2 {
-  background-image: url(../assets/deal-zabo.png);
-  /* height: 200px;
-  width: 100%; */
-}
 .deals-card-right {
-  background-image: url(../assets/deal-bloom.png);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.637),
+      rgba(0, 0, 0, 0.185)
+    ),
+    url(../assets/deal-zabo.png);
+  grid-column: 2;
+  grid-row: 1 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+.deals-card-left2 {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.637),
+      rgba(0, 0, 0, 0.185)
+    ),
+    url(../assets/deal-bloom.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  grid-column: 1;
+  grid-row: 2;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+.content-left2 h1,
+.content-left1 h1 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+.content-right h1 {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+}
+.content-left2 a,
+.content-left1 a,
+.content-right a {
+  color: white;
 }
 
 /* Responsive Media Query */
