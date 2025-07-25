@@ -425,6 +425,29 @@ form.join-form button {
   }
 
   /****************************** latest deals section responsive ***********************/
+  .latest-deals-section {
+    margin: 50px 20px;
+  }
+  .deals-card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+  }
+  .deals-card-left1 {
+    grid-column: 1;
+    grid-row: 1;
+    height: 185px;
+  }
+  .deals-card-left2 {
+    grid-column: 1;
+    grid-row: 2;
+    height: 185px;
+  }
+  .deals-card-right {
+    grid-column: 1;
+    grid-row: 3;
+    height: 185px;
+  }
 
   /******************************* Join Section responsive **************************/
   .join-section {
