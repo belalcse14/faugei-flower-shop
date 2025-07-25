@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 body {
   /* max-width: 1140px;
@@ -142,7 +142,7 @@ body {
   position: absolute;
   width: 300px;
   height: 300px;
-  top: -130px;
+  top: 80px;
   left: 330px;
 }
 .plants-lover-container {
@@ -358,6 +358,7 @@ form.join-form button {
 
 /******************************************   Responsive Media Query    ***************************/
 @media screen and (max-width: 576px) {
+  /*************** Navbar Responsive  **********************/
   .navbar-container {
     justify-content: center;
     width: 100%;
@@ -372,6 +373,8 @@ form.join-form button {
   .menu-items ul {
     visibility: hidden;
   }
+
+  /*************** Hero section Responsive  **********************/
   .hero-container {
     flex-direction: column-reverse;
     width: 100%;
@@ -384,6 +387,8 @@ form.join-form button {
   .hero-image img {
     width: 100%;
   }
+
+  /*************** Plants card Responsive  **********************/
   .plants-container {
     width: 100%;
     padding: 20px;
@@ -402,7 +407,8 @@ form.join-form button {
   .cards img {
     width: 100%;
   }
-  /* plants lover Section responsive */
+
+  /********************* plants lover Section responsive **************************/
   .plants-lover-section {
     width: 100%;
   }
@@ -416,5 +422,32 @@ form.join-form button {
 
   .plants-lover-title {
     font-size: 1.5rem;
+  }
+
+  /****************************** latest deals section responsive ***********************/
+
+  /******************************* Join Section responsive **************************/
+  .join-section {
+    height: 280px;
+    margin-bottom: 40px;
+  }
+  .join-section-container {
+    width: 80%;
+  }
+  .join-section-title {
+    font-size: 1.5rem;
+  }
+  form.join-form input[type="email"] {
+    width: 70%;
+  }
+  form.join-form button {
+    width: 30%;
+  }
+
+  /*********************** Footer section Responsive  ****************************/
+  .footer-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
   }
 }
