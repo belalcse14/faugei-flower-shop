@@ -8,6 +8,15 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@keyframes spin-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*********************************** Shared Styles ******************************/
 :root {
   --bg-color: #f5f8ff;
@@ -142,6 +151,7 @@ body {
   top: -130px;
   left: 340px;
   z-index: 1;
+  animation: spin-anim 5s linear infinite;
 }
 .plants-lover-container {
   display: flex;
