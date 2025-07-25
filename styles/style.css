@@ -463,6 +463,9 @@ form.join-form button {
   .latest-deals-section {
     margin: 50px 20px;
   }
+  .latest-deals-section h1 {
+    font-size: 1.5rem;
+  }
   .deals-card-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
