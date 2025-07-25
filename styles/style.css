@@ -2,11 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 body {
-  /* max-width: 1140px;
-  margin: 0 auto; */
   background-color: var(--bg-color);
   font-family: "Inter", sans-serif;
 }
@@ -50,7 +47,7 @@ body {
   display: flex;
   gap: 20px;
 }
-.menu-items ul {
+.menu-items > ul {
   display: flex;
   list-style: none;
   gap: 20px;
@@ -132,7 +129,7 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-/********************* Plants Lover section Styles ********************************/
+/************************************ Plants Lover section Styles ********************************/
 .plants-lover-section {
   max-width: var(--max-width);
   margin: var(--margin-auto);
@@ -142,12 +139,13 @@ body {
   position: absolute;
   width: 300px;
   height: 300px;
-  top: 80px;
-  left: 330px;
+  top: -130px;
+  left: 340px;
+  z-index: 1;
 }
 .plants-lover-container {
   display: flex;
-  gap: 90px;
+  gap: 70px;
   margin-top: 200px;
   align-items: center;
 }
@@ -161,17 +159,23 @@ body {
   font-size: 3rem;
   margin-bottom: 20px;
 }
+.plants-lover-text ul {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
 .plants-lover-text ul li {
   font-size: 1rem;
   line-height: 1.4rem;
   margin-bottom: 20px;
   color: var(--subtitle-color);
 }
+
 .plants-lover-image > img {
   width: 100%;
 }
 
-/******************* latest deals section Styles ***************************/
+/****************************** latest deals section Styles ***************************/
 .latest-deals-section {
   max-width: var(--max-width);
   margin: var(--margin-auto);
@@ -339,12 +343,12 @@ form.join-form button {
 .footer-logo > p {
   margin-top: 10px;
 }
-.footer-nav-ul li {
+.footer-nav > ul li {
   margin-bottom: 20px;
   list-style: none;
   cursor: pointer;
 }
-.footer-features-ul li {
+.footer-features > ul li {
   margin-bottom: 20px;
   list-style: none;
   cursor: pointer;
@@ -358,6 +362,9 @@ form.join-form button {
 
 /******************************************   Responsive Media Query    ***************************/
 @media screen and (max-width: 576px) {
+  * {
+    overflow-x: hidden;
+  }
   /*************** Navbar Responsive  **********************/
   .navbar-container {
     justify-content: center;
@@ -374,28 +381,38 @@ form.join-form button {
     visibility: hidden;
   }
 
-  /*************** Hero section Responsive  **********************/
+  /******************************** Hero section Responsive  ******************************/
   .hero-container {
     flex-direction: column-reverse;
     width: 100%;
     gap: 20px;
-    padding: 0 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
   .hero-text > h1 {
     font-size: 1.5rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-text p {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .hero-image img {
     width: 100%;
   }
 
-  /*************** Plants card Responsive  **********************/
+  /**************************** Plants card Responsive  *********************************/
   .plants-container {
     width: 100%;
     padding: 20px;
+    margin-bottom: 0;
+  }
+  .plants-container > h1 {
+    font-size: 1.5rem;
   }
   .plants-container > p {
     width: 100%;
-    padding: 20px;
   }
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -408,9 +425,10 @@ form.join-form button {
     width: 100%;
   }
 
-  /********************* plants lover Section responsive **************************/
+  /********************* Plants lover Section responsive **************************/
   .plants-lover-section {
     width: 100%;
+    padding: 0 20px;
   }
   .trusted-badge {
     visibility: hidden;
@@ -418,10 +436,17 @@ form.join-form button {
   .plants-lover-container {
     flex-direction: column;
     width: 100%;
+    gap: 30px;
+    margin-top: 50px;
   }
 
   .plants-lover-title {
     font-size: 1.5rem;
+  }
+  .plants-lover-text ul {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 10px;
   }
 
   /****************************** latest deals section responsive ***********************/
@@ -448,6 +473,9 @@ form.join-form button {
     grid-row: 3;
     height: 185px;
   }
+  .content-right h1 {
+    font-size: 1.5rem;
+  }
 
   /******************************* Join Section responsive **************************/
   .join-section {
@@ -472,5 +500,6 @@ form.join-form button {
     flex-direction: column;
     padding: 20px;
     gap: 15px;
+    margin-bottom: 50px;
   }
 }
